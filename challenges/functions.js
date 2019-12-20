@@ -6,6 +6,9 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume(a, b, cb){
+  return cb(a, b);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,12 +16,15 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const add = (num1, num2) => num1 + num2;
+const multiply = (num1, num2) => num1 * num2;
+const greeting = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}, nice to meeet you!`);
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -26,7 +32,9 @@
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+/* When the nested function is called, if it cannot find the requested variable(s) inside
+   the function itself, it will look for it in the previous function scopes including the
+   global window scope. Closures are created every time a function is created */
 
 const external = "I'm outside the function";
 
