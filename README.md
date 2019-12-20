@@ -29,14 +29,24 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+   A: forEach() mutates/change of the original array, while map() returns a new array of the same size. 
 
 2. What is the difference between a function and a method?
+   A: A function is a block of code that is build to perform a particular task, and executed when it is invoked(call), explicitiy passed.
+      A method is a block of code that is called by a name that is associated with an object/class(A member of an object/class), implicitly passed.
 
 3. What is closure?
+   A:  When a function is declared and created, a new scope is also created, and when the nested function is created and called, if it cannot find the requested variable(s) inside
+       the function itself, it will look for it in the previous function scopes including the global window scope. Closures are created every time a function is created */
 
 4. Describe the four rules of the 'this' keyword.
+   A: 1. When using "this" - it referes global scope, and value will be window/console object
+      2. When using "this" on a function - It refers to the object on the left of the ","
+      3. When using "this" on a constructor - It refers to the specific instance of the object that is created
+      4. When using "this" on call or apply method - it explicitly defined 
 
 5. Why do we need super() in an extended class?
+   A: The super keyword refers to the parent class, it is used to call the constructor of the parent class and to access the parent's properties and methods
 
 ## Project Set up
 
@@ -53,9 +63,9 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your team lead as a Reviewer on the Pull-request
-- [ ] TL then will count the HW as done by  merging the branch back into master.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Add your team lead as a Reviewer on the Pull-request
+- [X] TL then will count the HW as done by  merging the branch back into master.
 
 
 ## Minimum Viable Product
